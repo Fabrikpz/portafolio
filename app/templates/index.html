@@ -5,21 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}"> 
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="logo">
-                <!-- Logo -->
-                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
-            </div>
-            <div class="menu-icon">
-                <!-- Menu Icon (could be a hamburger menu) -->
-                <img src="{{ url_for('static', filename='menu-icon.png') }}" alt="Menu Icon">
-            </div>
-        </header>
-
+        {% include 'sidebar.html' %}
         <section class="hero">
             <div class="intro">
                 <span class="intro-badge">👋 Hi There! I'm Fabricio Silveyra</span>
@@ -39,5 +30,7 @@
             </div>
         </section>
     </div>
+
+    <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>  <!-- Agrega este script -->
 </body>
 </html>

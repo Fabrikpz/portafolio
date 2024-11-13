@@ -1,0 +1,87 @@
+/* Botón del menú (hamburguesa) */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #00ff88;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: left 0.3s ease;
+}
+
+/* Mostrar el botón del menú cuando el sidebar está abierto */
+.sidebar.open + .menu-btn {
+    left: 270px;  /* Se mueve el botón fuera de la pantalla */
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #0b0f1a;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Cuando se activa la clase "open", muestra el sidebar */
+.sidebar.open {
+    transform: translateX(0);
+}
+
+/* Estilo para el botón de cerrar en la barra lateral */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Alineado a la izquierda */
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1101; /* Asegura que el botón esté por encima del contenido */
+}
+
+/* Espacio para la foto de perfil */
+.sidebar-header {
+    display: flex;
+    justify-content: center;  /* Centrar la foto de perfil */
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+}
+
+/* Estilo de la foto de perfil */
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    object-fit: cover;
+}
+
+/* Estilos del menú (enlaces) */
+.menu a {
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: background 0.2s ease;
+}
+
+/* Estilo de los enlaces al pasar el ratón */
+.menu a:hover {
+    background-color: #00ff88;
+}
