@@ -7,7 +7,7 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
     color: #ffffff;
-    background: #0b0f1a; /* Fondo oscuro */
+    background: #0b0f1a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,62 +18,91 @@ body {
 .container {
     width: 90%;
     max-width: 1200px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-.logo img {
-    width: 50px;
-    height: auto;
-}
-
-.menu-icon img {
-    width: 30px;
-    height: auto;
+    text-align: center; 
 }
 
 .hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 50px 0;
 }
 
-.intro {
-    max-width: 600px;
+.profile-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00ff88;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.5);
 }
 
 .intro-badge {
     display: inline-block;
-    background-color: #00ff88;
+    background-color: transparent;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #00ff88;
 }
 
 .intro-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     margin-bottom: 20px;
+}
+
+.intro-title .highlight {
+    background: linear-gradient(90deg, #00ff88, #32cc64, #00ff88); /* Degradado entre verdes */
+    background-size: 200% 200%; /* Aumenta el tamaño del degradado */
+    -webkit-background-clip: text; /* Esto asegura que el degradado se aplique solo al texto */
+    color: transparent; /* Hace el texto transparente para que se vea solo el degradado */
+    animation: gradient-animation 3s ease infinite; /* Animación */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 200% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+.intro-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.intro-description {
+    font-size: 1.2rem;
+    color: #9fa8b3;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .highlight {
     color: #00ff88;
     font-weight: bold;
-}
-
-.intro-description {
-    font-size: 1rem;
-    color: #9fa8b3;
-    max-width: 500px;
-}
-
-.illustration img {
-    width: 300px;
-    height: auto;
 }

@@ -5,32 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        {% include 'sidebar.html' %}
+        {% include 'navbar.html' %}
         <section class="hero">
             <div class="intro">
-                <span class="intro-badge">👋 Hi There! I'm Fabricio Silveyra</span>
+                <div class="profile-container">
+                    <img src="{{ url_for('static', filename='img/kirby.png') }}" alt="Foto de perfil" class="profile-photo">
+                </div>
+
+                <span class="intro-badge">👋 Hi There!</span>
+
                 <h1 class="intro-title">
-                    A <span class="highlight">Fullstack Developer</span>. I Help Startups 
-                    <span class="highlight">Launch</span> And 
-                    <span class="highlight">Grow</span> Their Products
+                    I'm <span class="highlight">Fabricio Silveyra</span>
                 </h1>
+
+                <h2 class="intro-subtitle">
+                    A <span class="highlight">Fullstack Developer</span>
+                </h2>
+
                 <p class="intro-description">
-                    Over 4yrs+ of professional experience working with several programming tools 
-                    to deliver quality results to clients. I have expert knowledge in frontend engineering, 
-                    software testing, and web3 development.
+                    I am a student at the Instituto Técnico Renault, 17 years old, and passionate about programming. 
+                    I prefer backend development and have experience in various technologies to build scalable systems and software solutions.
                 </p>
-            </div>
-            <div class="illustration">
-                <img src="{{ url_for('static', filename='illustration.png') }}" alt="Illustration">
             </div>
         </section>
     </div>
-
-    <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>  <!-- Agrega este script -->
 </body>
 </html>

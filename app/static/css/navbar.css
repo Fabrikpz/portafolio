@@ -1,0 +1,45 @@
+/* Navbar */
+.navbar {
+    background-color: #0b0f1a;
+    padding: 10px 30px; /* Espaciado lateral */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Esto asegura que la navbar ocupe todo el largo de la pantalla */
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Menú de navegación */
+.menu {
+    display: flex;
+    gap: 30px; /* Espacio entre los enlaces */
+    padding-right: 30px; /* Deja un espacio a la derecha */
+}
+
+/* Enlaces del menú */
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover en los enlaces */
+.menu a:hover {
+    color: #00ff88;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: center; /* Centra los elementos en pantallas pequeñas */
+    }
+
+    .menu {
+        gap: 15px; /* Menos espacio entre los enlaces en pantallas pequeñas */
+    }
+}
