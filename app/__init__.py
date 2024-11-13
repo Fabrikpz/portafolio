@@ -1,29 +1,37 @@
-import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from dotenv import load_dotenv
-from .routes import main
+from flask_login import LoginManager
+from flask_migrate import Migrate
 
-# Cargar las variables de entorno del archivo .env
-load_dotenv()
-
-# Crear la instancia de la base de datos
 db = SQLAlchemy()
+login_manager = LoginManager()
+migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
 
-    # Configurar la base de datos con las variables de entorno
-    app.config['SQLALCHEMY_DATABASE_URI'] = (
-        f"mysql+mysqlconnector://{os.getenv('DB_USERNAME')}:{os.getenv('DB_PASSWORD')}"
-        f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
-    )
+    username = 'ux0syfoiocjl9tmp'
+    password = 'Kfl1HM7o3G6xwfC5jdpX'
+    hostname = 'bm2rhm44eaghsqxpk3yr-mysql.services.clever-cloud.com'
+    database = 'bm2rhm44eaghsqxpk3yr'
+    app.config['SECRET_KEY'] = 'tu_clave_secreta_aqui'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+mysqlconnector://{username}:{password}@{hostname}/{database}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-
-    # Inicializar la base de datos
+    
     db.init_app(app)
+    migrate.init_app(app, db)
+    login_manager.init_app(app)
 
+    from .models import User
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
+
+    from .routes import main
     app.register_blueprint(main)
 
+    with app.app_context():
+        db.create_all()
+    
     return app

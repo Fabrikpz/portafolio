@@ -10,6 +10,7 @@
     display: flex;
     justify-content: flex-end; /* Alinea el contenido a la derecha */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease; /* Efecto de transición para el fondo */
 }
 
 /* Menú de navegación */
@@ -25,12 +26,30 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 15px; /* Añadido padding para mejorar la interactividad */
+    border-radius: 4px; /* Bordes redondeados */
 }
 
 /* Hover en los enlaces */
 .menu a:hover {
     color: #00ff88;
+    background-color: rgba(0, 255, 136, 0.2); /* Fondo con opacidad para hover */
+}
+
+/* Estilo específico para el botón de Logout */
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en el botón de logout */
+.logout-btn:hover {
+    background-color: #c82333;
 }
 
 /* Responsivo para pantallas pequeñas */
@@ -41,5 +60,15 @@
 
     .menu {
         gap: 15px; /* Menos espacio entre los enlaces en pantallas pequeñas */
+    }
+
+    .menu a {
+        font-size: 16px; /* Ajusta el tamaño de los enlaces en pantallas pequeñas */
+        padding: 6px 10px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .logout-btn {
+        font-size: 16px;
+        padding: 6px 10px;
     }
 }
