@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +14,16 @@ body {
     background: #0b0f1a;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    text-align: center; 
+    text-align: center;
+    padding-top: 80px;
 }
 
 .hero {
@@ -27,12 +32,13 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 50px 0;
+    margin-top: 0;
 }
 
 .profile-container {
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     position: relative;
 }

@@ -17,6 +17,10 @@ def create_app():
     app.config['SECRET_KEY'] = 'tu_clave_secreta_aqui'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+mysqlconnector://{username}:{password}@{hostname}/{database}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SQLALCHEMY_POOL_RECYCLE'] = 3600 
+    app.config['SQLALCHEMY_POOL_SIZE'] = 10    
+    app.config['SQLALCHEMY_MAX_OVERFLOW'] = 20  
+    app.config['SQLALCHEMY_POOL_TIMEOUT'] = 30
 
     db.init_app(app)
     login_manager.init_app(app)

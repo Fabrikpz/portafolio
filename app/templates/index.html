@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skills.css') }}">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         {% include 'navbar.html' %}
-        <section class="hero">
+        <section class="hero" id="about-me">
             <div class="intro">
                 <div class="profile-container">
-                    <img src="{{ url_for('static', filename='img/kirby.png') }}" alt="Foto de perfil" class="profile-photo">
+                    <img src="{{ url_for('static', filename='img/kirby.png') }}" alt="Foto de perfil"
+                        class="profile-photo">
                 </div>
 
                 <span class="intro-badge">👋 Hi There!</span>
@@ -28,11 +33,61 @@
                 </h2>
 
                 <p class="intro-description">
-                    I am a student at the Instituto Técnico Renault, 17 years old, and passionate about programming. 
-                    I prefer backend development and have experience in various technologies to build scalable systems and software solutions.
+                    I am a student at the Instituto Técnico Renault, 17 years old, and passionate about programming.
+                    I prefer backend development and have experience in various technologies to build scalable systems
+                    and software solutions.
                 </p>
             </div>
         </section>
+
+        <section class="skills" id="skills">
+            <h2 class="section-title">My skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>Backend Development</h3>
+                    <ul>
+                        <i class="devicon-python-plain-wordmark colored"></i>
+                        <i class="devicon-flask-original-wordmark colored"></i>
+                        <i class="devicon-nodejs-plain-wordmark colored"></i>
+                        <i class="devicon-express-original colored"></i>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Frontend Development</h3>
+                    <ul>
+                        <i class="devicon-html5-plain-wordmark colored"></i>
+                        <i class="devicon-css3-plain-wordmark colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-react-original-wordmark colored"></i>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Version Control</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+
+        </section>
     </div>
 </body>
+
 </html>
