@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/skills.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -46,8 +47,8 @@
                 <div class="skill-card">
                     <h3>Backend Development</h3>
                     <ul>
-                        <i class="devicon-python-plain-wordmark colored"></i>
-                        <i class="devicon-flask-original-wordmark colored"></i>
+                        <i class="devicon-python-plain colored"></i>
+                        <i class="devicon-flask-original colored"></i>
                         <i class="devicon-nodejs-plain-wordmark colored"></i>
                         <i class="devicon-express-original colored"></i>
                     </ul>
@@ -55,35 +56,113 @@
                 <div class="skill-card">
                     <h3>Frontend Development</h3>
                     <ul>
-                        <i class="devicon-html5-plain-wordmark colored"></i>
-                        <i class="devicon-css3-plain-wordmark colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
                         <i class="devicon-javascript-plain colored"></i>
-                        <i class="devicon-react-original-wordmark colored"></i>
+                        <i class="devicon-react-original colored"></i>
+                        <i class="devicon-bootstrap-plain colored"></i>
                     </ul>
                 </div>
                 <div class="skill-card">
                     <h3>Databases</h3>
                     <ul>
-                        <li>MySQL</li>
-                        <li>MongoDB</li>
-                        <li>PostgreSQL</li>
+                        <i class="devicon-mongodb-plain colored"></i>
+                        <i class="devicon-mysql-plain colored"></i>
+                        <i class="devicon-sqlalchemy-plain colored"></i>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>Version Control</h3>
+                    <h3>Tools and technologies</h3>
                     <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
+                        <i class="devicon-git-plain colored"></i>
+                        <i class="devicon-github-original colored"></i>
+                        <i class="devicon-postman-plain colored"></i>
+                        <i class="devicon-p5js-original colored"></i>
+                        <i class="devicon-discordjs-plain colored"></i>
+                        <i class="devicon-arduino-plain colored"></i>
                     </ul>
                 </div>
             </div>
         </section>
-        <section id="projects">
+        <section class="projects" id="projects">
             <h2 class="section-title">Projects</h2>
 
+            <p class="projects-quote">Everything you can <span class="highlight">imagine</span>, you can <span class="highlight">program</span>.</p>
+
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="preview1.jpg" alt="Project 1 Preview" class="project-image">
+                    <div class="project-header">
+                        <h3 class="project-title">Aula virtual</h3>
+                        <a href="https://github.com/Fabrikpz/aula-virtual" class="github-link" target="_blank">
+                            <i class="devicon-github-original colored github-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="preview2.jpg" alt="Project 2 Preview" class="project-image">
+                    <div class="project-header">
+                        <h3 class="project-title">API Clash Of Clans</h3>
+                        <a href="https://github.com/Fabrikpz/proyecto-api-coc" class="github-link" target="_blank">
+                            <i class="devicon-github-original colored github-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="preview2.jpg" alt="Project 2 Preview" class="project-image">
+                    <div class="project-header">
+                        <h3 class="project-title">Juego de memoria</h3>
+                        <a href="https://github.com/Fabrikpz/Juego-de-memoria" class="github-link" target="_blank">
+                            <i class="devicon-github-original colored github-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="preview2.jpg" alt="Project 2 Preview" class="project-image">
+                    <div class="project-header">
+                        <h3 class="project-title">4 elements game</h3>
+                        <a href="https://github.com/Fabrikpz/4-elements-game" class="github-link" target="_blank">
+                            <i class="devicon-github-original colored github-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="preview2.jpg" alt="Project 2 Preview" class="project-image">
+                    <div class="project-header">
+                        <h3 class="project-title">Api CoC Bot</h3>
+                        <a href="https://github.com/Fabrikpz/4-elements-game" class="github-link" target="_blank">
+                            <i class="devicon-github-original colored github-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="preview2.jpg" alt="Project 2 Preview" class="project-image">
+                    <div class="project-header">
+                        <h3 class="project-title">Copa Renault web</h3>
+                        <a href="https://github.com/Fabrikpz/4-elements-game" class="github-link" target="_blank">
+                            <i class="devicon-github-original colored github-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="preview2.jpg" alt="Project 2 Preview" class="project-image">
+                    <div class="project-header">
+                        <h3 class="project-title">NFSMW 05 web</h3>
+                        <a href="https://github.com/ismael123439/proyecto-nfsmw" class="github-link" target="_blank">
+                            <i class="devicon-github-original colored github-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
+        <section class="contact" id="contact">
             <h2 class="section-title">Contact</h2>
 
         </section>

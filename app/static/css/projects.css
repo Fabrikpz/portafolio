@@ -1,0 +1,77 @@
+.projects {
+    padding: 50px 0;
+    background-color: #0b0f1a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.projects .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00ff88;
+    margin-bottom: 30px;
+    text-transform: none;
+}
+
+.projects-quote {
+    font-size: 1.4rem;
+    font-weight: 550;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #161b2d;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00ff88;
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle; /* Alineación vertical */
+}
+
+.github-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    vertical-align: middle; /* Alineación vertical */
+    margin-left: 10px; /* Espacio adicional entre el nombre y el ícono */
+}
+
+.github-icon {
+    font-size: 1.8rem; /* Tamaño del ícono */
+    color: #ffffff; /* Color del ícono */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.github-link:hover .github-icon {
+    transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
+    color: #00ff88; /* Cambia el color al pasar el mouse */
+}
