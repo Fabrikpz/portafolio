@@ -43,7 +43,9 @@
 }
 
 .project-image {
-    width: 100%;
+    width: 100%; /* Ocupa el ancho del contenedor */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
     border-radius: 10px;
     margin-bottom: 15px;
 }
