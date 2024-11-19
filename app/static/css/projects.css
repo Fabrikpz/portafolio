@@ -1,3 +1,4 @@
+/* Projects Section */
 .projects {
     padding: 50px 0;
     background-color: #0b0f1a;
@@ -93,4 +94,44 @@
 .github-link:hover .github-icon {
     transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
     color: #00ff88; /* Cambia el color al pasar el mouse */
+}
+
+/* Media Queries */
+
+/* Para dispositivos con pantallas más pequeñas (Tabletas, por ejemplo) */
+@media (max-width: 768px) {
+    .project-card {
+        width: 220px; /* Ajusta el tamaño de las tarjetas */
+    }
+
+    .project-title {
+        font-size: 1.3rem; /* Reduce el tamaño del texto */
+    }
+
+    .project-image {
+        height: 180px; /* Reduce la altura de las imágenes */
+    }
+
+    .github-icon {
+        font-size: 1.6rem; /* Ajuste en el tamaño del ícono */
+    }
+}
+
+/* Para dispositivos móviles (pantallas más pequeñas como teléfonos) */
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
+    }
+
+    .project-title {
+        font-size: 1.2rem; /* Reduce aún más el tamaño del texto */
+    }
+
+    .project-image {
+        height: 160px; /* Reduce aún más la altura de las imágenes */
+    }
+
+    .github-icon {
+        font-size: 1.4rem; /* Ajuste en el tamaño del ícono */
+    }
 }

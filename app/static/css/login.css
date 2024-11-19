@@ -113,3 +113,41 @@ a:hover {
     color: #856404;
     border: 1px solid #ffeeba;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group .form-control {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-group .form-control {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

@@ -66,3 +66,53 @@
     margin: 10px; /* Agrega espacio entre los iconos */
     color: #00ff88; /* Color verde para los iconos */
 }
+
+/* Media Queries */
+
+/* Para dispositivos con pantallas más pequeñas (Tabletas, por ejemplo) */
+@media (max-width: 768px) {
+    .skills-container {
+        gap: 20px;
+    }
+
+    .skill-card {
+        width: 220px; /* Ajusta el tamaño de las tarjetas */
+        flex: 0 1 48%; /* Asegura que haya dos íconos por fila */
+    }
+
+    .skill-card h3 {
+        font-size: 1.4rem; /* Reduce el tamaño del texto */
+    }
+
+    .skill-card ul li {
+        font-size: 0.9rem; /* Ajuste para texto más pequeño */
+    }
+
+    .skill-card i {
+        font-size: 3.5rem; /* Reduce el tamaño de los iconos */
+    }
+}
+
+/* Para dispositivos móviles (pantallas más pequeñas como teléfonos) */
+@media (max-width: 480px) {
+    .skills-container {
+        gap: 15px;
+    }
+
+    .skill-card {
+        width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
+        flex: 0 1 100%; /* Una tarjeta por fila */
+    }
+
+    .skill-card h3 {
+        font-size: 1.2rem; /* Reduce aún más el tamaño del texto */
+    }
+
+    .skill-card ul li {
+        font-size: 0.8rem; /* Ajuste para texto más pequeño */
+    }
+
+    .skill-card i {
+        font-size: 3rem; /* Reduce el tamaño de los iconos */
+    }
+}

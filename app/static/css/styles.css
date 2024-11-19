@@ -53,7 +53,7 @@ body {
 }
 
 .profile-photo:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(0, 255, 136, 0.5);
 }
 
@@ -111,4 +111,56 @@ body {
 .highlight {
     color: #00ff88;
     font-weight: bold;
+}
+
+/* Media Queries */
+
+/* Para dispositivos con pantallas más pequeñas (Tabletas, por ejemplo) */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .intro-title {
+        font-size: 2rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .intro-description {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 95%;
+        padding-top: 60px;
+    }
+}
+
+/* Para dispositivos móviles (pantallas más pequeñas como teléfonos) */
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .intro-title {
+        font-size: 1.6rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .intro-description {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 100%;
+        padding-top: 40px;
+    }
 }
