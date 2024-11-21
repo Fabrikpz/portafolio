@@ -1,46 +1,59 @@
-/* Skills Section */
 .skills {
     padding: 50px 0;
-    background-color: #0b0f1a;
+    background: linear-gradient(135deg, #1a2b3d 0%, #2b3c54 100%);
     color: #ffffff;
     text-align: center;
+    animation: gradient-animation 5s ease infinite;
+    border-radius: 10px;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 200% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
 }
 
 .skills .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #00ff88; /* Color verde que usas en el título */
+    color: #00ff88;
     margin-bottom: 30px;
     text-transform: none;
 }
 
 .skills-container {
     display: flex;
-    justify-content: space-between; /* Asegura que haya un espacio adecuado entre los íconos */
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px; /* Aumentado el gap entre las tarjetas */
+    gap: 30px;
     padding: 0 20px;
 }
 
 .skill-card {
-    background-color: #1f2430; /* Un color oscuro para el fondo de las tarjetas */
-    border: 1px solid #00ff88; /* Borde verde para las tarjetas */
+    background-color: #1f2430;
+    border: 1px solid #00ff88;
     border-radius: 8px;
     padding: 20px;
-    width: 250px; /* Establece un tamaño fijo para las tarjetas */
+    width: 250px;
     box-shadow: 0 4px 12px rgba(0, 255, 136, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 0 1 45%; /* Esto asegura que solo haya dos íconos por fila */
+    flex: 0 1 45%;
 }
 
 .skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 255, 136, 0.7); /* Efecto hover más notorio */
+    box-shadow: 0 8px 16px rgba(0, 255, 136, 0.7);
 }
 
 .skill-card h3 {
     font-size: 1.5rem;
-    color: #00ff88; /* Verde en los títulos de las habilidades */
+    color: #00ff88;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -52,67 +65,62 @@
 
 .skill-card ul li {
     font-size: 1rem;
-    color: #9fa8b3; /* Color gris para las listas */
+    color: #9fa8b3;
     margin-bottom: 5px;
 }
 
 .skill-card ul li:hover {
-    color: #ffffff; /* Resaltar habilidades al pasar el cursor */
-    cursor: pointer;
+    color: #ffffff;
 }
 
 .skill-card i {
-    font-size: 4rem; /* Tamaño de los iconos más grande */
-    margin: 10px; /* Agrega espacio entre los iconos */
-    color: #00ff88; /* Color verde para los iconos */
+    font-size: 4rem;
+    margin: 10px;
+    color: #00ff88;
 }
 
-/* Media Queries */
-
-/* Para dispositivos con pantallas más pequeñas (Tabletas, por ejemplo) */
 @media (max-width: 768px) {
     .skills-container {
         gap: 20px;
     }
 
     .skill-card {
-        width: 220px; /* Ajusta el tamaño de las tarjetas */
-        flex: 0 1 48%; /* Asegura que haya dos íconos por fila */
+        width: 220px;
+        flex: 0 1 48%;
     }
 
     .skill-card h3 {
-        font-size: 1.4rem; /* Reduce el tamaño del texto */
+        font-size: 1.4rem;
     }
 
     .skill-card ul li {
-        font-size: 0.9rem; /* Ajuste para texto más pequeño */
+        font-size: 0.9rem;
     }
 
     .skill-card i {
-        font-size: 3.5rem; /* Reduce el tamaño de los iconos */
+        font-size: 3.5rem;
     }
 }
 
-/* Para dispositivos móviles (pantallas más pequeñas como teléfonos) */
 @media (max-width: 480px) {
     .skills-container {
         gap: 15px;
     }
 
     .skill-card {
-        width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
-        flex: 0 1 100%; /* Una tarjeta por fila */
+        width: 100%;
+        flex: 0 1 100%;
     }
 
     .skill-card h3 {
-        font-size: 1.2rem; /* Reduce aún más el tamaño del texto */
+        font-size: 1.2rem;
     }
 
     .skill-card ul li {
-        font-size: 0.8rem; /* Ajuste para texto más pequeño */
+        font-size: 0.8rem;
     }
 
     .skill-card i {
-        font-size: 3rem; /* Reduce el tamaño de los iconos */
+        font-size: 3rem;
     }
 }

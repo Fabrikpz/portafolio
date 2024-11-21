@@ -33,6 +33,10 @@ body {
     flex-direction: column;
     padding: 50px 0;
     margin-top: 0;
+    background: linear-gradient(135deg, #0b0f1a, #1e293b, #0b0f1a); /* Degradado diagonal */
+    background-size: 400% 400%; /* Ajuste para animación */
+    animation: gradient-shift 8s ease infinite; /* Animación suave */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .profile-container {
@@ -81,18 +85,17 @@ body {
     animation: gradient-animation 3s ease infinite; /* Animación */
 }
 
-@keyframes gradient-animation {
+@keyframes gradient-shift {
     0% {
-        background-position: 200% 0%;
+        background-position: 0% 50%;
     }
     50% {
-        background-position: 0% 100%;
+        background-position: 100% 50%;
     }
     100% {
-        background-position: 200% 0%;
+        background-position: 0% 50%;
     }
 }
-
 .intro-subtitle {
     font-size: 2rem;
     font-weight: 600;

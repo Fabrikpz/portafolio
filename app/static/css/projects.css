@@ -1,9 +1,9 @@
-/* Projects Section */
 .projects {
     padding: 50px 0;
-    background-color: #0b0f1a;
+    background: linear-gradient(135deg, #1a2b3d 0%, #0f1a26 100%);
     color: #ffffff;
     text-align: center;
+    border-radius: 10px;
 }
 
 .projects .section-title {
@@ -44,9 +44,9 @@
 }
 
 .project-image {
-    width: 100%; /* Ocupa el ancho del contenedor */
-    height: 200px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -56,8 +56,6 @@
     font-weight: 600;
     color: #00ff88;
     margin-bottom: 0;
-    display: inline-block;
-    vertical-align: middle; /* Alineación vertical */
 }
 
 .project-link {
@@ -69,69 +67,65 @@
 
 .project-link img {
     transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
-    display: block;
 }
 
 .project-link:hover img {
-    transform: scale(1.1); /* Amplía ligeramente la imagen */
-    filter: brightness(0.8); /* Oscurece la imagen */
+    transform: scale(1.1);
+    filter: brightness(0.8);
 }
 
 .github-link {
     text-decoration: none;
     color: inherit;
     display: inline-block;
-    vertical-align: middle; /* Alineación vertical */
-    margin-left: 10px; /* Espacio adicional entre el nombre y el ícono */
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 .github-icon {
-    font-size: 1.8rem; /* Tamaño del ícono */
-    color: #ffffff; /* Color del ícono */
+    font-size: 1.8rem;
+    color: #ffffff;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .github-link:hover .github-icon {
-    transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
-    color: #00ff88; /* Cambia el color al pasar el mouse */
+    transform: scale(1.2);
+    color: #00ff88;
 }
 
 /* Media Queries */
-
-/* Para dispositivos con pantallas más pequeñas (Tabletas, por ejemplo) */
 @media (max-width: 768px) {
     .project-card {
-        width: 220px; /* Ajusta el tamaño de las tarjetas */
+        width: 220px;
     }
 
     .project-title {
-        font-size: 1.3rem; /* Reduce el tamaño del texto */
+        font-size: 1.3rem;
     }
 
     .project-image {
-        height: 180px; /* Reduce la altura de las imágenes */
+        height: 180px;
     }
 
     .github-icon {
-        font-size: 1.6rem; /* Ajuste en el tamaño del ícono */
+        font-size: 1.6rem;
     }
 }
 
-/* Para dispositivos móviles (pantallas más pequeñas como teléfonos) */
 @media (max-width: 480px) {
     .project-card {
-        width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
+        width: 100%;
     }
 
     .project-title {
-        font-size: 1.2rem; /* Reduce aún más el tamaño del texto */
+        font-size: 1.2rem;
     }
 
     .project-image {
-        height: 160px; /* Reduce aún más la altura de las imágenes */
+        height: 160px;
     }
 
     .github-icon {
-        font-size: 1.4rem; /* Ajuste en el tamaño del ícono */
+        font-size: 1.4rem;
     }
 }
