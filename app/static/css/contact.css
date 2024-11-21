@@ -1,10 +1,10 @@
 .contact {
     padding: 50px 20px;
-    background: linear-gradient(135deg, #1b2a3a 0%, #16222d 100%); /* Degradado inicial */
-    background-size: 400% 400%; /* Ajuste para animación */
+    background: linear-gradient(135deg, #1b2a3a 0%, #16222d 100%); 
+    background-size: 400% 400%;
     color: #fff;
     text-align: center;
-    animation: gradient-shift-contact 8s ease infinite; /* Animación suave */
+    animation: gradient-shift-contact 8s ease infinite;
     border-radius: 10px;
 }
 
@@ -20,7 +20,6 @@
     }
 }
 
-/* Estilos adicionales */
 .contact .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -111,6 +110,19 @@
     transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 255, 136, 0.7);
 }
+
+.fa-copy {
+    cursor: pointer;
+    margin-left: 5px;
+    color: #007BFF;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-copy:hover {
+    transform: scale(1.2);
+    color: #00ff88;
+}
+
 
 @media (max-width: 768px) {
     .contact .section-title {
