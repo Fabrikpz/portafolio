@@ -1,0 +1,40 @@
+{% include 'navbar.html' %}
+
+{% block content %}
+    <section class="hero" id="edit-profile">
+        <div class="intro">
+            <!-- Formulario para editar nombre, rol y descripción -->
+            <form method="POST" action="{{ url_for('main.edit_profile') }}">
+                <!-- CSRF Token -->
+                {{ form.hidden_tag() }}
+
+                <!-- Campo para editar el nombre -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" value="{{ current_user.name or '' }}">
+                </div>
+
+                <!-- Campo para editar el rol -->
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <input type="text" id="role" name="role" class="form-control" value="{{ current_user.role or '' }}">
+                </div>
+
+                <!-- Campo para editar la descripción -->
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" class="form-control" rows="4">{{ current_user.description or '' }}</textarea>
+                </div>
+
+                <!-- Botón de envío -->
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Vinculación del archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_profile.css') }}">
+
+{% endblock %}

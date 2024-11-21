@@ -1,21 +1,22 @@
 .skills {
     padding: 50px 0;
-    background: linear-gradient(135deg, #1a2b3d 0%, #2b3c54 100%);
+    background: linear-gradient(135deg, #1a2b3d, #2b3c54, #1a2b3d);
+    background-size: 400% 400%;
     color: #ffffff;
     text-align: center;
-    animation: gradient-animation 5s ease infinite;
+    animation: gradient-shift-skills 8s ease infinite;
     border-radius: 10px;
 }
 
-@keyframes gradient-animation {
+@keyframes gradient-shift-skills {
     0% {
-        background-position: 200% 0%;
+        background-position: 0% 50%;
     }
     50% {
-        background-position: 0% 100%;
+        background-position: 100% 50%;
     }
     100% {
-        background-position: 200% 0%;
+        background-position: 0% 50%;
     }
 }
 

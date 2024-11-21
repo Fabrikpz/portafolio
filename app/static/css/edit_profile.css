@@ -1,0 +1,107 @@
+/* Estilos para el formulario en edit_profile.html */
+
+/* Formulario principal */
+form {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Grupo de campos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas de los campos */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Estilo de los inputs */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+/* Estilo para el área de texto */
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Enfoque (hover/focus) de los inputs */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Botón de enviar */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.btn-edit-profile {
+    color: #333;  /* Color del ícono por defecto */
+    text-decoration: none;
+    font-size: 20px; /* Tamaño del ícono */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover */
+.btn-edit-profile:hover {
+    color: #007bff; /* Color al pasar el mouse */
+}
+
+/* Efecto al hacer hover sobre el ícono */
+.btn-edit-profile i:hover {
+    transform: scale(1.1);  /* Aumenta el tamaño del ícono */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 12px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
