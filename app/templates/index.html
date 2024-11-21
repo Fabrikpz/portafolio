@@ -18,7 +18,7 @@
 
 <body>
     <div class="container">
-        {% include 'navbar.html' %}
+        {% include 'navbar.html' %} <!-- jinja2 -->
         <section class="hero" id="about-me">
             <div class="intro">
                 <div class="profile-container">
@@ -37,6 +37,7 @@
         
                 <p class="intro-description" id="description">{{ current_user.description or 'I am a student at the Instituto Técnico Renault, 17 years old, and passionate about programming. I prefer backend development and have experience in various technologies to build scalable systems and software solutions.' }}</p>
                 
+                <!-- edit button para editar parte del portfolio.-->
                 {% if current_user.is_authenticated %}
                 <a href="{{ url_for('main.edit_profile') }}" class="btn-edit-profile">
                     <i class="fas fa-pencil-alt"></i>
@@ -60,7 +61,7 @@
                 <div class="skill-card">
                     <h3>Frontend Development</h3>
                     <ul>
-                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i><!-- iconos devicons.com-->
                         <i class="devicon-css3-plain colored"></i>
                         <i class="devicon-javascript-plain colored"></i>
                         <i class="devicon-react-original colored"></i>
@@ -189,14 +190,14 @@
                 <p><strong>Address:</strong> Calle Rocket 123, League, Argentina</p>
             </div>
         
-            <div class="contact-buttons">
+            <div class="contact-buttons"> <!-- cv -->
                 <a href="{{ url_for('static', filename='files/CV_Fabricio_Silveyra.pdf') }}" class="btn" download>
                     Download my CV
                 </a>
             </div>
         
             <div class="social-links">
-                <a href="https://linkedin.com/" aria-label="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://linkedin.com/" aria-label="Linkedin"><i class="fa-brands fa-linkedin"></i></a> <!-- iconos fontawesome.com-->
                 <a href="https://github.com/Fabrikpz" aria-label="Github"><i class="fa-brands fa-github"></i></a>
                 <a href="https://instagram.com/fabrieiw" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
